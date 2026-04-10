@@ -3,3 +3,34 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #f4f7f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.completed-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-info {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.task-checkbox {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  padding: 0.2rem 0.6rem;
+}
