@@ -39,11 +39,23 @@ taskList.addEventListener("click", (e) => {
         const li = e.target.closest("li");
         const span = li.querySelector(".task-text");
 
-        const newText = prompt("Edit your task:", span.textContent);
+        if (e.target.classList.contains("editBtn")) {
+    const span = e.target.closest("li").querySelector(".task-text");
 
-        if (newText !== null && newText.trim() !== "") {
-            span.textContent = newText;
-        }
+    const input = document.createElement("input");
+    input.value = span.textContent;
+    input.className = "form-control";
+
+    span.replaceWith(input);
+
+    input.addEventListener("blur", () => {
+        const newSpan = document.createElement("span");
+        newSpan.className = "task-text";
+        newSpan.textContent = input.value;
+
+        input.replaceWith(newSpan);
+    });
+}
     }
 
 });
