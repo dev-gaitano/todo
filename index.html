@@ -4,12 +4,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo App</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <title>Dailly Planner</title>
+   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
+ <section>
+  <div class="container my-4">
+<!-- Header -->
+  <div class="planner-header mb-4">
+     <p id="date"></p>
+  </div>
+
+  <div class="row">
+ <!-- Schedule -->
+    <div class="col-md-8">
+      <div class="card section-card p-3 mb-4">
+        <h4 >🕒 Schedule </h4>
+
+  <div class="time-block">
+   <strong>5:30 AM - 8:00 AM</strong>
+   <ul class="list-group">
+    <li class="list-group-item">
+      <input type="checkbox">
+      Pray Fajr & read Quran
+      <button class="delete-button">delete</button>
+    </li>
+    <li class="list-group-item">
+     <input type="checkbox">
+     Study Session 1(1hr)
+     <button class="delete-button">delete</button>
+    </li>
+    <li class="list-group-item">
+       <input type="checkbox"> 
+       Breakfast prep & Eat
+      <button class="delete-button">delete</button>
+    </li>
+    </ul>
+   <div class="addTask">
+      <input type="text" class="newTask" placeholder="Add a new task...">
+      <button class="add-task-button" width="100">Add Task</button>
+      
+    </div>
+    </div>
+
+  <div class="time-block">
+  <strong>8:00 AM - 12:00 PM</strong>
+    <ul class="list-group">
+      
+    <li class="list-group-item">
+    <input type="checkbox"> 
+      class session (2hr)
+     <button class="delete-button">delete</button>
+    </li>
+    <li class="list-group-item">
+      <input type="checkbox"> 
+      workout session(1hr)
+      <button class="delete-button">delete</button>
+    </li>
+    <li class="list-group-item">
+      <input type="checkbox"> 
+      Shower & Self-care
+      <button class="delete-button">delete</button>
+      
+    </li>
+    </ul>
+    <div class="addTask">
+      <input type="text" class="newTask" placeholder="Add a new task...">
+      <button class="add-task-button" width="100">Add Task</button>
+   </div>
+    
+  </div>
+
+  <div class="time-block">
+    <strong>1:00 PM - 4:00 PM</strong>
+    <ul class="list-group">
+    <li class="list-group-item">
+      <input type="checkbox"> 
+      Lunch prep & Eat
+      <button class="delete-button">delete</button>
+    </li>
+    <li class="list-group-item">
+      <input type="checkbox"> 
+      Study Session 2(1hr)  
+      <button class="delete-button">delete</button>
+    </li>
+    <li class="list-group-item">
+      <input type="checkbox">
+       Entertainment/Relaxation
+     <button class="delete-button">delete</button>
+    </li>
+    </ul>
+    <div class="addTask">
+      <input type="text" class="newTask" placeholder="Add a new task...">
+      <button class="add-task-button" width="100">Add Task</button>
+  </div>
+  </div>
+
+  <div class="time-block">
+    <strong>4:00 PM - 6:00 PM</strong>
+    <ul class="list-group">
+    <li class="list-group-item">
+       <input type="checkbox"> 
+      work  & family time
+     <button class="delete-button">delete</button>
+    </li>
+     <li class="list-group-item">
+      <input type="checkbox">
+      Study Session 3(1hr)
+      <button class="delete-button">delete</button>
+    </li>
+     <li class="list-group-item">
+      <input type="checkbox">
+      Evening walk(1hr)
+      <button class="delete-button">delete</button>
+     </li>
+    </ul>
+    <div class="addTask">
+      <input type="text" class="newTask" placeholder="Add a new task...">
+      <button class="add-task-button" width="100">Add Task</button>
+    </div>
+   
+</div>
+ <div class="time-block">
+    <strong>6:00 PM - 10:00 PM</strong>
+    <ul class="list-group">
+    <li class="list-group-item">
+       <input type="checkbox"> 
+      Dinner prep & Eat
+      <button class="delete-button">delete</button>
+    </li>
+     <li class="list-group-item">
+       <input type="checkbox">
+         me time & hobbies
+      <button class="delete-button">delete</button>
+    </li>
+     <li class="list-group-item">
+        <input type="checkbox">
+      bed time routine & Sleep
+      <button class="delete-button">delete</button>
+    </li>  
+    </ul>
+   <div class="addTask">
+      <input type="text" class="newTask" placeholder="Add a new task...">
+      <button class="add-task-button" width="100">Add Task</button>
+     
+    </div>
+  </div>
+</div>
+ </div>
+
+<!-- Sidebar -->
+  <div class="col-md-4">
+
+  <!-- To-Do List -->
+  <h4>✅ Top Priorities</h4>
+<div class="priority-item">
+ <input type="text" placeholder="write task">
+  <input type="checkbox">
+</div>
+<div class="priority-item">
+ <input type="text" placeholder="write task">
+  <input type="checkbox">
+</div>
+<div class="priority-item">
+ <input type="text" placeholder="write task">
+  <input type="checkbox">
+</div>
+
+ <!-- Notes -->
+  <div class="section-card">
+    <h4>📝 Notes</h4>
+    <textarea class="form-control" rows="6" placeholder="Write your notes here..."></textarea>
+  </div>
+</div>
+</div>
+</div>
+ </section>
+
+<script src="./js/script.js">
+  </script>
 
 </body>
-
 </html>
+
+
+
