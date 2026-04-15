@@ -26,7 +26,7 @@ addBtn.addEventListener("click", () => {
     newTaskInput.value = "";
 });
 
-// HANDLE EDIT & DELETE (Event Delegation)
+// HANDLE EDIT & DELETE 
 taskList.addEventListener("click", (e) => {
 
     // DELETE
